@@ -1,0 +1,39 @@
+.btn {
+    outline: 0;
+    border: 0;
+    background: none;
+    padding: 0;
+    -webkit-appearance: none;
+    font-family: "Cairo", sans-serif;
+}
+
+.btn-green {
+    background: #2D783F;
+    color: white;
+    transition: .5s;
+    &:hover {
+        background: #EE7325;
+        color: white;
+    }
+}
+
+.btn-orange {
+    background: #EE7325;
+    color: white;
+    transition: .5s;
+    &:hover {
+        background: #2D783F;
+        color: white;
+    }
+}
+
+.red-outline {
+    color: #EE2525;
+    border: 1px solid #EE2525;
+    background: transparent;
+    &:hover {
+        color: white;
+        background: #EE2525;
+        border: 1px solid transparent;
+    }
+}
