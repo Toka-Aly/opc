@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="scss/custom.css">
+</head>
+
+<body dir="rtl">
+    <div class="global-wrapping">
+        <div class="topbar">
+            <div class="container">
+                <div class="right-side">
+                    <a href="http://127.0.0.1:5500/signIN.html">
+                        <figure>
+                            <svg viewBox="0 0 16.113 16.113">
+                                <use xlink:href="images/sprite.svg#account"></use>
+                            </svg>
+                        </figure>
+                        ادخل حسابك او سجل الان
+                    </a>
+                    <a href="#">
+                        <figure>
+                            <svg viewBox="0 0 19.777 14.465">
+                                <use xlink:href="images/sprite.svg#payment"></use>
+                            </svg>
+                        </figure>
+                        الدفع
+                    </a>
+                    <a href="#">
+                        <figure>
+                            <svg viewBox="0 0 17.267 18.246">
+                                <use xlink:href="images/sprite.svg#follow"></use>
+                            </svg>
+                        </figure>
+                        تتبع الشحنة
+                    </a>
+                    <a href="#">
+                        <figure>
+                            <svg viewBox="0 0 13.136 16.167">
+                                <use xlink:href="images/sprite.svg#location"></use>
+                            </svg>
+                        </figure>
+                        فروعنا
+                    </a>
+                </div>
+                <div class="left-side">
+                    <span>
+                        <figure>
+                            <svg viewBox="0 0 16.167 16.167">
+                                <use xlink:href="images/sprite.svg#call"></use>
+                            </svg>
+                        </figure>
+                        0126050244
+                    </span>
+                    <span>
+                        <figure>
+                            <svg viewBox="0 0 19.51 14.006">
+                                <use xlink:href="images/sprite.svg#email"></use>
+                            </svg>
+                        </figure>
+                        info@opc.com
+                    </span>
+                </div>
+            </div>
+        </div>
+        <header>
+            <div class="container">
+                <nav class="row">
+                    <a href="#" class="col-md-3">
+                        <figure>
+                            <img src="images/header-logo.svg">
+                        </figure>
+                    </a>
+                    <div class="search-field col-md-6">
+                        <div class="field">
+                            <input type="text" class="input" placeholder="بحث بحسب اسم القطعة أو رقمها">
+                        </div>
+                        <button class="btn btn-green">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="left-side col-md-3">
+                        <div>
+                            <a href="http://127.0.0.1:5500/account.html">
+                                <figure>
+                                    <svg viewBox="0 0 35 35">
+                                        <use xlink:href="images/sprite.svg#profile"></use>
+                                    </svg>
+                                </figure>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <figure>
+                                    <svg viewBox="0 0 35 35">
+                                        <use xlink:href="images/sprite.svg#like"></use>
+                                    </svg>
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="menu-area cart">
+                            <a href="#" class="menu" id="menu" onclick="showDropdownMenu()">
+                                <div>
+                                    <h5>
+                                        المشتريات
+                                    </h5>
+                                    <p>
+                                        $ 0.00
+                                    </p>
+                                </div>
+                                <figure>
+                                    <svg viewBox="0 0 35 35">
+                                        <use xlink:href="images/sprite.svg#cart"></use>
+                                    </svg>
+                                </figure>
+                                <span class="count">10</span>
+
+                            </a>
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+            <div class="subnav">
+                <div class="demo demo1">
+                    <nav class="navbar">
+                        <button class="navbar-toggler">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </button>
+                        <ul class="navbar-nav">
+                            <li class="nav-close">
+                                <button class="btn-nav-close">
+                                    <span class="close-btn">
+                                        <i class="fa fa-window-close"></i>
+                                    </span>
+                                </button>
+                            </li>
+                            <li class="nav-item first-dropdown">
+                                <a href="#" class="nav-link  btn-green">جميع الأقسام</a>
+                                <ul class="dropdown sub-dropdown">
+                                    <li class="nav-item sub-item">
+                                        <a href="#" class="nav-link sub-link ">المحرك</a>
+                                        <ul class="dropdown inside-item">
+                                            <div class="grid">
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            البواجي
+                                                        </p>
+                                                        <p>
+                                                            جلد البواجي
+                                                        </p>
+                                                        <p>
+                                                            أسلاك البواجي
+                                                        </p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            وجيه
+                                                        </p>
+                                                        <p>
+                                                            وجه غطاء بلوف
+                                                        </p>
+                                                        <p>
+                                                            وجه طبة وحساس
+                                                        </p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            كراسى المكينة
+                                                        </p>
+                                                        <p>
+                                                            كراسي الجيربوكس
+                                                        </p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            وجيه
+                                                        </p>
+                                                        <p>
+                                                            وجه غطاء بلوف
+                                                        </p>
+                                                        <p>
+                                                            وجه طبة وحساس
+                                                        </p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            صوف المكينة
+                                                        </p>
+                                                        <p>
+                                                            شنبر
+                                                        </p>
+                                                        <p>
+                                                            جلد بلوف
+                                                        </p>
+                                                        <p>
+                                                            قزوز
+                                                        </p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            سيور
+                                                        </p>
+                                                        <p>
+                                                            جنزير
+                                                        </p>
+                                                        <p>
+                                                            شداد
+                                                        </p>
+                                                        <p>
+                                                            بكرة
+                                                        </p>
+                                                    </a>
+                                                </li>
+                                            </div>
+                                            <div class="more">
+                                                <p>
+                                                    <a href="#">
+                                                        مشاهدة الكل
+                                                    </a>
+                                                </p>
+
+                                            </div>
+
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item sub-item">
+                                        <a href="#" class="nav-link sub-link">نظام البنزين والزيت والهواء</a>
+                                        <ul class="dropdown inside-item">
+                                            <div class="grid">
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            فلاتر
+                                                        </p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            كرتير
+                                                        </p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            طرمبات
+                                                        </p>
+
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            كرتير
+                                                        </p>
+
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            خرطوش هواء
+                                                        </p>
+
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            سلك بنزين
+                                                        </p>
+
+                                                    </a>
+                                                </li>
+                                            </div>
+                                            <div class="more">
+                                                <p>
+                                                    <a href="#">
+                                                        مشاهدة الكل
+                                                    </a>
+                                                </p>
+
+                                            </div>
+
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item sub-item">
+                                        <a href="#" class="nav-link sub-link">الجيربوكس</a>
+                                        <ul class="dropdown inside-item">
+                                            <div class="grid">
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            طقم كلتش
+                                                        </p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            علبة كلتش
+                                                        </p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            صوف جيربوكس
+                                                        </p>
+
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            علبة كلتش
+                                                        </p>
+
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            فلتر جيربوكس
+                                                        </p>
+
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            فلتر جيربوكس </p>
+
+                                                    </a>
+                                                </li>
+                                            </div>
+                                            <div class="more">
+                                                <p>
+                                                    <a href="#">
+                                                        مشاهدة الكل
+                                                    </a>
+                                                </p>
+
+                                            </div>
+
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item sub-item">
+                                        <a href="#" class="nav-link sub-link">عضلات السيارة</a>
+                                        <ul class="dropdown inside-item">
+                                            <div class="grid">
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            مساعد
+                                                        </p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            مقص
+                                                        </p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            مسمار توازن
+                                                        </p>
+
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            عكس
+                                                        </p>
+
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            فلتر جيربوكس
+                                                        </p>
+
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            عمود سحب
+                                                        </p>
+
+                                                    </a>
+                                                </li>
+                                            </div>
+                                            <div class="more">
+                                                <p>
+                                                    <a href="#">
+                                                        مشاهدة الكل
+                                                    </a>
+                                                </p>
+
+                                            </div>
+
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item sub-item">
+                                        <a href="#" class="nav-link sub-link">الدركسون</a>
+                                        <ul class="dropdown inside-item">
+                                            <div class="grid">
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            مساعد
+                                                        </p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            مقص
+                                                        </p>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            مسمار توازن
+                                                        </p>
+
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            عكس
+                                                        </p>
+
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            فلتر جيربوكس
+                                                        </p>
+
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link">
+                                                        <p>
+                                                            عمود سحب
+                                                        </p>
+
+                                                    </a>
+                                                </li>
+                                            </div>
+                                            <div class="more">
+                                                <p>
+                                                    <a href="#">
+                                                        مشاهدة الكل
+                                                    </a>
+                                                </p>
+
+                                            </div>
+
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item sub-item">
+                                        <a href="#" class="nav-link sub-link">فرامل</a>
+                                    </li>
+                                    <li class="nav-item sub-item">
+                                        <a href="#" class="nav-link sub-link">نظام تبريد المحرك</a>
+                                    </li>
+                                    <li class="nav-item sub-item">
+                                        <a href="#" class="nav-link sub-link">نظام الكهرباء</a>
+                                    </li>
+                                    <li class="nav-item sub-item">
+                                        <a href="#" class="nav-link sub-link">البودى</a>
+                                    </li>
+                                    <li class="nav-item sub-item">
+                                        <a href="#" class="nav-link sub-link">القصة الداخلية واليدات</a>
+                                    </li>
+                                    <li class="nav-item sub-item">
+                                        <a href="#" class="nav-link sub-link">نظام التكييف</a>
+                                    </li>
+                                    <li class="nav-item sub-item">
+                                        <a href="#" class="nav-link sub-link">الزيوت والسوائل</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item first-dropdown">
+                                <a href="#" class="nav-link">زيوت وسوائل </a>
+                            </li>
+                            <li class="nav-item first-dropdown">
+                                <a href="#" class="nav-link">
+                                    فلاتر
+                                </a>
+                            </li>
+                            <li class="nav-item first-dropdown">
+                                <a href="#" class="nav-link">
+                                    سيور
+                                </a>
+
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    بواجى
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    قماشات فرامل
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    مساعدات
+                                </a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="page-title">
+                <div class="container">
+                    <a href="http://127.0.0.1:5500/index.html">
+                        الرئيسية
+                    </a>
+                    <i class="fa fa-angle-left"></i>
+                    <p>
+                        حسابي
+                    </p>
+                </div>
+            </div>
+            <div class="block maps">
+                <div class="container">
+                    <div class="heading">
+                        <div class="title">
+                            <h2>
+                                فروعنا حول المملكة
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="grid">
+                        <div class="grid-item">
+                            <h4>
+                                فرع الرياض
+                            </h4>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d884013.2899253682!2d31.25119!3d30.060463!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1622025367265!5m2!1sen!2seg" width="449" height="248" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <div class="details">
+                                <p>
+                                    رقم الهاتف
+                                    <span>
+                                        +9623223233
+                                    </span>
+                                </p>
+                                <p>
+                                    العنوان
+                                    <span>
+                                        المملكة العربية السعودية - جدة - طريق القسيم - 21110
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <h4>
+                                فرع الرياض
+                            </h4>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d884013.2899253682!2d31.25119!3d30.060463!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1622025367265!5m2!1sen!2seg" width="449" height="248" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <div class="details">
+                                <p>
+                                    رقم الهاتف
+                                    <span>
+                                        +9623223233
+                                    </span>
+                                </p>
+                                <p>
+                                    العنوان
+                                    <span>
+                                        المملكة العربية السعودية - جدة - طريق القسيم - 21110
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <h4>
+                                فرع الرياض
+                            </h4>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d884013.2899253682!2d31.25119!3d30.060463!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1622025367265!5m2!1sen!2seg" width="449" height="248" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            <div class="details">
+                                <p>
+                                    رقم الهاتف
+                                    <span>
+                                        +9623223233
+                                    </span>
+                                </p>
+                                <p>
+                                    العنوان
+                                    <span>
+                                        المملكة العربية السعودية - جدة - طريق القسيم - 21110
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 logo">
+                        <ul>
+                            <li>
+                                <figure>
+                                    <img src="images/footer-logo.svg">
+                                </figure>
+                            </li>
+                            <li>
+                                <ul class="social">
+                                    <li>
+                                        <figure>
+                                            <svg viewBox="0 0 112.196 112.196">
+                                            <use xlink:href="images/sprite.svg#linkedin"></use>
+                                        </svg>
+                                        </figure>
+                                    </li>
+                                    <li>
+                                        <figure>
+                                            <svg viewBox="0 0 512 512">
+                                            <use xlink:href="images/sprite.svg#instagram"></use>
+                                        </svg>
+                                        </figure>
+                                    </li>
+                                    <li>
+                                        <figure>
+                                            <svg viewBox="0 0 512 512">
+                                            <use xlink:href="images/sprite.svg#twitter"></use>
+                                        </svg>
+                                        </figure>
+                                    </li>
+                                    <li>
+                                        <figure>
+                                            <svg viewBox="0 0 112.196 112.196">
+                                            <use xlink:href="images/sprite.svg#facebook"></use>
+                                        </svg>
+                                        </figure>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h3>
+                            خدمة العملاء
+                        </h3>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    سياسة الشحن
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    سياسة الاسترجاع والاستبدال
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    الأسئلة المتكررة
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+
+                                    تواصل معنا
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <h3>
+                            نبذة عنا
+                        </h3>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    من نحن
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+
+                                    فروعنا حول المملكة
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <div>
+                            <h3>
+                                اشترك لكي تحصل على آخر العروض والخصومات
+                            </h3>
+                            <div class="search-field">
+                                <div class="field">
+                                    <input type="text" class="input" placeholder="ادخل بريدك الالكترونى">
+                                    <button class="btn-green btn">
+                                    اشتراك
+                                </button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div>
+                            <div class="contact-us">
+                                <h3>
+                                    تواصل معنا
+                                </h3>
+                                <p>
+                                    info@opc.com | 0126050244
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <ul>
+                        <li>
+                            <figure>
+                                <img src="images/mastercard.svg">
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="images/visa.svg">
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="images/mada.svg">
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="images/pay.svg">
+                            </figure>
+                        </li>
+                    </ul>
+                    <p>
+                        Copyright©OPC2021
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js " integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=" anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src="js/customScript.js "></script>
+</body>
+
+</html>
